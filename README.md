@@ -45,8 +45,8 @@ Reinforcement Learning focuses on decision-making and action-taking in dynamic e
 
 ## 🚀 Projects
 This repository includes implementations of the following:
-1. **Spam Detection**: Built a supervised learning model to classify emails as spam or not spam.
-2. **Customer Segmentation**: Used clustering techniques to identify distinct customer groups in retail data.
+1. **Supervised Learning Model Comparison**: compared different Supervised ML models performance on flower clarifaction and diabetes recongintaion.
+2. **Unsupervised Learning Model Comparison**: compared different Unsupervised ML models performance on flower clarifaction and diabetes recongintaion.
 3. **Game AI**: Designed a reinforcement learning agent to play and improve performance in a simulated environment.
 
 ---
@@ -54,7 +54,7 @@ This repository includes implementations of the following:
 ## 📈 Tools and Technologies
 - **Programming Languages**: Python, R
 - **Libraries and Frameworks**: Scikit-learn, TensorFlow, PyTorch, Pandas, NumPy
-- **Visualization**: Matplotlib, Seaborn
+- **Visualization**: Matplotlib
 
 ---
 
