@@ -52,7 +52,7 @@ This repository includes implementations of the following:
 ---
 
 ## 📈 Tools and Technologies
-- **Programming Languages**: Python, R
+- **Programming Languages**: Python
 - **Libraries and Frameworks**: Scikit-learn, TensorFlow, PyTorch, Pandas, NumPy
 - **Visualization**: Matplotlib
 
