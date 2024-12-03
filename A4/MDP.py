@@ -132,40 +132,40 @@ class Plots:
 
 if __name__ == "__main__":
 
-    # frozen_lake = FrozenLake()
+    frozen_lake = FrozenLake()
 
-    # # VI/PI
-    # V, V_track, pi = Planner(frozen_lake.env.P).value_iteration(n_iters=1000)
-    # max_value_per_iter = np.amax(V_track, axis=1)
-    # Plots.v_iters_plot(max_value_per_iter, "Max State Values", "images4/ValueFLiters.png")
-    # Plots.grid_values_heat_map(V, "State Values", "images4/ValueFLheat.png")
-    # n_states = frozen_lake.env.observation_space.n
-    # new_pi = list(map(lambda x: pi(x), range(n_states)))
-    # s = int(math.sqrt(n_states))
-    # Plots.grid_world_policy_plot(np.array(new_pi), "Grid World Policy", "images4/ValueFLpolicy.png")
-
-
-    # V, V_track, pi = Planner(frozen_lake.env.P).policy_iteration()
-    # max_value_per_iter = np.amax(V_track, axis=1)
-    # Plots.v_iters_plot(max_value_per_iter, "Max State Values", "images4/PolicyFLiters.png")
-    # Plots.grid_values_heat_map(V, "State Values", "images4/PolicyFLheat.png")
-    # n_states = frozen_lake.env.observation_space.n
-    # new_pi = list(map(lambda x: pi(x), range(n_states)))
-    # s = int(math.sqrt(n_states))
-    # Plots.grid_world_policy_plot(np.array(new_pi), "Grid World Policy", "images4/PolicyFLpolicy.png")
-
-    # # Q-learning
-    # Q, V, pi, Q_track, pi_track = RL(frozen_lake.env).q_learning()
-    # max_q_value_per_iter = np.amax(np.amax(Q_track, axis=2), axis=1)
-    # Plots.v_iters_plot(max_q_value_per_iter, "Max Q-Values", "images4/QFLiters.png")
-    # Plots.grid_values_heat_map(V, "State Values", "images4/QFLheat.png")
-    # n_states = frozen_lake.env.observation_space.n
-    # new_pi = list(map(lambda x: pi(x), range(n_states)))
-    # s = int(math.sqrt(n_states))
-    # Plots.grid_world_policy_plot(np.array(new_pi), "Grid World Policy", "images4/QFLpolicy.png")
+    # VI/PI
+    V, V_track, pi = Planner(frozen_lake.env.P).value_iteration(n_iters=1000)
+    max_value_per_iter = np.amax(V_track, axis=1)
+    Plots.v_iters_plot(max_value_per_iter, "Max State Values", "images4/ValueFLiters.png")
+    Plots.grid_values_heat_map(V, "State Values", "images4/ValueFLheat.png")
+    n_states = frozen_lake.env.observation_space.n
+    new_pi = list(map(lambda x: pi(x), range(n_states)))
+    s = int(math.sqrt(n_states))
+    Plots.grid_world_policy_plot(np.array(new_pi), "Grid World Policy", "images4/ValueFLpolicy.png")
 
 
-    # test_scores = TestEnv.test_env(env=frozen_lake.env, render=True, user_input=False, pi=pi)
+    V, V_track, pi = Planner(frozen_lake.env.P).policy_iteration()
+    max_value_per_iter = np.amax(V_track, axis=1)
+    Plots.v_iters_plot(max_value_per_iter, "Max State Values", "images4/PolicyFLiters.png")
+    Plots.grid_values_heat_map(V, "State Values", "images4/PolicyFLheat.png")
+    n_states = frozen_lake.env.observation_space.n
+    new_pi = list(map(lambda x: pi(x), range(n_states)))
+    s = int(math.sqrt(n_states))
+    Plots.grid_world_policy_plot(np.array(new_pi), "Grid World Policy", "images4/PolicyFLpolicy.png")
+
+    # Q-learning
+    Q, V, pi, Q_track, pi_track = RL(frozen_lake.env).q_learning()
+    max_q_value_per_iter = np.amax(np.amax(Q_track, axis=2), axis=1)
+    Plots.v_iters_plot(max_q_value_per_iter, "Max Q-Values", "images4/QFLiters.png")
+    Plots.grid_values_heat_map(V, "State Values", "images4/QFLheat.png")
+    n_states = frozen_lake.env.observation_space.n
+    new_pi = list(map(lambda x: pi(x), range(n_states)))
+    s = int(math.sqrt(n_states))
+    Plots.grid_world_policy_plot(np.array(new_pi), "Grid World Policy", "images4/QFLpolicy.png")
+
+
+    test_scores = TestEnv.test_env(env=frozen_lake.env, render=True, user_input=False, pi=pi)
 
 
     # # --------------------------------------------------------------------------------------------------------------------
@@ -173,27 +173,27 @@ if __name__ == "__main__":
 
     blackjack = Blackjack()
 
-    # VI/PI
-    # V, V_track, pi = Planner(blackjack.P).value_iteration()
-    # max_value_per_iter = np.amax(V_track, axis=1)
-    # Plots.v_iters_plot(max_value_per_iter, "Max State Values", "images4/ValueBJiters.png")
-    # plt.clf()
-    # fig, axs = plt.subplots(2)
-    # fig.suptitle('Black Jack Value Iterations')
-    # axs[0].imshow([V]*2, cmap="plasma", aspect="auto")
-    # axs[1].plot(V)
-    # plt.savefig("images4/ValueBJheat.png")
+    VI/PI
+    V, V_track, pi = Planner(blackjack.P).value_iteration()
+    max_value_per_iter = np.amax(V_track, axis=1)
+    Plots.v_iters_plot(max_value_per_iter, "Max State Values", "images4/ValueBJiters.png")
+    plt.clf()
+    fig, axs = plt.subplots(2)
+    fig.suptitle('Black Jack Value Iterations')
+    axs[0].imshow([V]*2, cmap="plasma", aspect="auto")
+    axs[1].plot(V)
+    plt.savefig("images4/ValueBJheat.png")
 
 
-    # V, V_track, pi = Planner(blackjack.P).policy_iteration()
-    # max_value_per_iter = np.amax(V_track, axis=1)
-    # Plots.v_iters_plot(max_value_per_iter, "Max State Values", "images4/PolicyBJiters.png")
-    # plt.clf()
-    # fig, axs = plt.subplots(2)
-    # fig.suptitle('Black Jack Policy Iterations')
-    # axs[0].imshow([V]*2, cmap="plasma", aspect="auto")
-    # axs[1].plot(V)
-    # plt.savefig("images4/PolicyBJheat.png")
+    V, V_track, pi = Planner(blackjack.P).policy_iteration()
+    max_value_per_iter = np.amax(V_track, axis=1)
+    Plots.v_iters_plot(max_value_per_iter, "Max State Values", "images4/PolicyBJiters.png")
+    plt.clf()
+    fig, axs = plt.subplots(2)
+    fig.suptitle('Black Jack Policy Iterations')
+    axs[0].imshow([V]*2, cmap="plasma", aspect="auto")
+    axs[1].plot(V)
+    plt.savefig("images4/PolicyBJheat.png")
 
     # Q-learning
     Q, V, pi, Q_track, pi_track = RL(blackjack.env).q_learning(blackjack.n_states, blackjack.n_actions, blackjack.convert_state_obs)
@@ -208,8 +208,8 @@ if __name__ == "__main__":
 
 
 
-    # test_scores = TestEnv.test_env(env=blackjack.env, render=True, pi=pi, user_input=False,
-    #                                convert_state_obs=blackjack.convert_state_obs)
+    test_scores = TestEnv.test_env(env=blackjack.env, render=True, pi=pi, user_input=False,
+                                   convert_state_obs=blackjack.convert_state_obs)
 
 #----------------------------------------------Sources-------------------------------------------------------------------------
 """
