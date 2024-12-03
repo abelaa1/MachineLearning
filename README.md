@@ -45,8 +45,8 @@ Reinforcement Learning focuses on decision-making and action-taking in dynamic e
 
 ## 🚀 Projects
 This repository includes implementations of the following:
-1. **Supervised Learning Model Comparison**: compared different Supervised ML models performance on flower clarifaction and diabetes recongintaion.
-2. **Unsupervised Learning Model Comparison**: compared different Unsupervised ML models performance on flower clarifaction and diabetes recongintaion.
+1. **Supervised Learning Model Comparison**: compared different Supervised ML models performance on flower clarification and diabetes recognition.
+2. **Unsupervised Learning Model Comparison**: compared different Unsupervised ML models performance on flower clarification and diabetes recognition.
 3. **Game AI**: Designed a reinforcement learning agent to play and improve performance in a simulated environment.
 
 ---
